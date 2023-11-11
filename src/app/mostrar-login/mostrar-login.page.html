@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">MostrarLogin</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card *ngIf="usuarioActivo">
+    <ion-card-header>
+      <ion-button size="small" class="left-align" color="primary" routerLink="/login">Salir</ion-button>
+      <img [src]="usuarioActivo.image">
+      <span class="blue-text">{{usuarioActivo.gender}}</span>
+      <ion-card-title>Nombre: {{usuarioActivo.firstName}} {{usuarioActivo.lastName}}</ion-card-title>
+      <ion-card-subtitle>Usuario: {{usuarioActivo.username}}</ion-card-subtitle>
+      <ion-card-subtitle>Contacto:</ion-card-subtitle>
+      <ion-card-subtitle>{{usuarioActivo.email}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button routerLink="/producto" expand="block" color="danger">Ir a Catalogo </ion-button>
+    </ion-card-content>    
+  </ion-card>
+</ion-content>
